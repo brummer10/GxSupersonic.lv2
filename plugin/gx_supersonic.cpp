@@ -276,7 +276,6 @@ Gx_supersonic_::instantiate(const LV2_Descriptor* descriptor,
                             double rate, const char* bundle_path,
                             const LV2_Feature* const* features)
 {
-    fprintf(stderr, "init the plug-in class");
   // init the plug-in class
   Gx_supersonic_ *self = new Gx_supersonic_();
   if (!self) {
@@ -284,7 +283,6 @@ Gx_supersonic_::instantiate(const LV2_Descriptor* descriptor,
   }
 
   self->init_dsp_((uint32_t)rate);
-    fprintf(stderr, "return LV2_Handle");
 
   return (LV2_Handle)self;
 }
